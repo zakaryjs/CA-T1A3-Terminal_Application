@@ -5,7 +5,25 @@ import calendar
 from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar
 import csv
 
-csv_file = "calendar.csv"
+file = "calendar.csv"
+
+try:
+    calendar_file = open(file, "r")
+
+    calendar_file.close()
+
+except FileNotFoundError as file_not_found:
+    print("calendar.csv not found, initialising set up...")
+    year = input("Input the calendar year: ")
+    print("Success!")
+    input("Press enter to continue...")
+    print("For a guide on how to use the application, please visit https://github.com/zakaryjs/T1A3-Terminal_Application")
+    input("Press enter to continue...")
+    calendar_file = open(file, "w")
+    calendar_file.write(f"{year}\n")
+    calendar_file.write("Activity_Title, Date\n")
+    calendar_file.close()
+
 
 print("""
 ███████╗░█████╗░░█████╗░██╗░░░░░███████╗███╗░░██╗██████╗░░█████╗░██████╗░
@@ -47,4 +65,4 @@ while decision != "5":
         print("Invalid input. Please return an input between 1 and 5.")
 
 
-print("You have ended zCalendar. I hope you enjoyed the program!")
+print("You have ended zCalendar. I hope you enjoyed using the program!")

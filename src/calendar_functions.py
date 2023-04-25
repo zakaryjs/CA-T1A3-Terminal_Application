@@ -1,6 +1,7 @@
 def add_calendar():
     print("You have selected Add Calendar - you can now add an activity to your calendar.")
     activity_title = input("Input the name of the activity you want to add to your calendar: ")
+    activity_date = input("Input the date that the activity will take place: ")
     input("Press enter to continue...")
 
 
