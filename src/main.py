@@ -17,6 +17,8 @@ print("""
 print("Welcome to zCalendar, a calendar application created in Python.")
 print("Enjoy!")
 
+input("Press enter to continue...")
+
 def main_menu():
     print("1. Input 1 to add an activity to the calendar")
     print("2. Input 2 to remove an activity from the calendar")

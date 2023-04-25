@@ -28,7 +28,7 @@ Files will be output in CSV format after modifications have been made.
 Will be implemented with a main_menu function, printing all available features along with their associated inputs required for operation. This will be located in ```main.py```. 
 
 2. Add Activity to Date
-Will be implemented with an add_calendar function, allowing the user to input a date (month and day) as well as an activity name - with additional details if needed. This function will be located in ```add_calenar.py```.
+Will be implemented with an add_calendar function, allowing the user to input a date (month and day) as well as an activity name - with additional details if needed. This function will be located in ```add_calendar.py```.
 
 3. Delete Activity from Date
 Will be implemented with a delete_calendar function, allowing the user to input a date, view all of the activities associated with that date, and then delete a certain activity. This function will be located in ```delete_calendar.py```. 
@@ -40,7 +40,7 @@ Will be implemented with a view_calendar function, allowing the user to input a 
 Will be implemented with a ```measure_calendar``` function, used in conjunction with the view_calendar function. This will provide an output depending on how many activities are stored in a certain month. The three available outputs are "This is a quiet month", "This is a relatively busy month", "This is a really busy month!".
 
 
-Priorities, checklists all in Trello.
+<!-- Priorities, checklists all in Trello.
 
 
 Develop an implementation plan which:
@@ -53,4 +53,4 @@ Utilise a suitable project management platform to track this implementation plan
 Provide screenshots/images and/or a reference to an accessible project management platform used to track this implementation plan. 
 
 
-> Your checklists for each feature should have at least 5 items.
+> Your checklists for each feature should have at least 5 items. -->
