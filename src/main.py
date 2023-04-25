@@ -1,11 +1,21 @@
 import datetime
 from datetime import date
 import calendar
-from colored import fg, bg, attr
+# from colored import fg, bg, attr
 from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar
 import csv
 
+csv_file = "calendar.csv"
 
+print("""
+███████╗░█████╗░░█████╗░██╗░░░░░███████╗███╗░░██╗██████╗░░█████╗░██████╗░
+╚════██║██╔══██╗██╔══██╗██║░░░░░██╔════╝████╗░██║██╔══██╗██╔══██╗██╔══██╗
+░░███╔═╝██║░░╚═╝███████║██║░░░░░█████╗░░██╔██╗██║██║░░██║███████║██████╔╝
+██╔══╝░░██║░░██╗██╔══██║██║░░░░░██╔══╝░░██║╚████║██║░░██║██╔══██║██╔══██╗
+███████╗╚█████╔╝██║░░██║███████╗███████╗██║░╚███║██████╔╝██║░░██║██║░░██║
+╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝""")
+print("Welcome to zCalendar, a calendar application created in Python.")
+print("Enjoy!")
 
 def main_menu():
     print("1. Input 1 to add an activity to the calendar")
@@ -22,12 +32,17 @@ while decision != "5":
     decision = main_menu()
 
     if (decision == "1"):
+        add_calendar()
+    elif (decision == "2"):
         pass
-    if (decision == "2"):
+    elif (decision == "3"):
         pass
-    if (decision == "3"):
+    elif (decision == "4"):
         pass
-    if (decision == "4"):
+    elif (decision == "5"):
         pass
-    if (decision == "5"):
-        pass
+    else:
+        print("Invalid input. Please return an input between 1 and 5.")
+
+
+print("You have ended zCalendar. I hope you enjoyed the program!")
