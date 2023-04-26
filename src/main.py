@@ -55,7 +55,7 @@ while decision != "5":
     if (decision == "1"):
         add_calendar(calendar_file)
     elif (decision == "2"):
-        pass
+        delete_calendar(calendar_file)
     elif (decision == "3"):
         pass
     elif (decision == "4"):
