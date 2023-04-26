@@ -20,7 +20,7 @@ except FileNotFoundError as file_not_found:
     print("For a guide on how to use the application, please visit https://github.com/zakaryjs/T1A3-Terminal_Application")
     input("Press enter to continue...")
     calendar_file = open(file, "w")
-    calendar_file.write(f"{year}\n")
+    calendar_file.write(f"Year: {year}\n")
     calendar_file.write("Activity_Title, Date\n")
     calendar_file.close()
 
@@ -38,6 +38,7 @@ print("Enjoy!")
 input("Press enter to continue...")
 
 def main_menu():
+    print("MAIN MENU:")
     print("1. Input 1 to add an activity to the calendar")
     print("2. Input 2 to remove an activity from the calendar")
     print("3. Input 3 to view activities stored in a certain month")
@@ -52,7 +53,7 @@ while decision != "5":
     decision = main_menu()
 
     if (decision == "1"):
-        add_calendar()
+        add_calendar(calendar_file)
     elif (decision == "2"):
         pass
     elif (decision == "3"):
@@ -63,6 +64,7 @@ while decision != "5":
         pass
     else:
         print("Invalid input. Please return an input between 1 and 5.")
+        input("Press enter to continue...")
 
 
 print("You have ended zCalendar. I hope you enjoyed using the program!")
