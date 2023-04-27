@@ -59,7 +59,7 @@ while decision != "5":
     elif (decision == "3"):
         view_calendar(calendar_file)
     elif (decision == "4"):
-        pass
+        measure_calendar(calendar_file)
     elif (decision == "5"):
         pass
     else:

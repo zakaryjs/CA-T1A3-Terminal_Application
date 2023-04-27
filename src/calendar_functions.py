@@ -42,44 +42,35 @@ def view_calendar(calendar_file):
     # print(view_calendar_list[2])
     for i in view_calendar_list[2:]:
         month = i[1]
-        if month.lower() == "january":
+        if month.lower() == view_month.lower():
             print(i)
     
-        if month.lower() == "february":
-            print(i)
-    
-        if month.lower() == "march":
-            print(i)
-    
-        if month.lower() == "april":
-            print(i)
-    
-        if month.lower() == "may":
-            print(i)
-    
-        if month.lower() == "june":
-            print(i)
-    
-        if month.lower() == "july":
-            print(i)
-    
-        if month.lower() == "august":
-            print(i)
-    
-        if month.lower() == "september":
-            print(i)
-    
-        if month.lower() == "october":
-            print(i)
-    
-        if month.lower() == "november":
-            print(i)
-    
-        if month.lower() == "december":
-            print(i)
     input("Success! Press enter to continue...")
 
     
-def measure_calendar():
+def measure_calendar(calendar_file):
+    score = 0
     print("You have selected Measure Calendar. You can now select a month and receive an output based on how busy the selected month is.")
     view_month = input("Input the name of the calendar month that you would like to view: ")
+    view_calendar_list = []
+    with open("calendar.csv", "r") as file:
+        read_csv = csv.reader(file)
+        for row in read_csv:
+            view_calendar_list.append(row)
+    for i in view_calendar_list[2:]:
+        month = i[1]
+        if month.lower() == view_month.lower():
+            score += 1
+
+    if score >= 4:
+        print(f"{view_month} is a really busy month!")
+        input("Press enter to continue...")
+
+    elif score >= 2:
+        print(f"{view_month} is a relatively busy month!")
+        input("Press enter to continue...")
+
+    elif score >= 0:
+        print(f"{view_month} is a really quiet month!")
+        input("Press enter to continue...")
+                
