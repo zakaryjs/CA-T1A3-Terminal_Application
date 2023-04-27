@@ -43,54 +43,43 @@ def view_calendar(calendar_file):
     for i in view_calendar_list[2:]:
         month = i[1]
         if month.lower() == "january":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "february":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "march":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "april":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "may":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "june":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "july":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "august":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "september":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "october":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "november":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    
         if month.lower() == "december":
-            input("Success! Press enter to continue.")
             print(i)
-            input("Press enter to continue...")
+    input("Success! Press enter to continue...")
 
     
 def measure_calendar():
-    pass
+    print("You have selected Measure Calendar. You can now select a month and receive an output based on how busy the selected month is.")
+    view_month = input("Input the name of the calendar month that you would like to view: ")
