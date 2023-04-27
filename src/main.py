@@ -21,7 +21,7 @@ except FileNotFoundError as file_not_found:
     input("Press enter to continue...")
     calendar_file = open(file, "w")
     calendar_file.write(f"Year: {year}\n")
-    calendar_file.write("Activity_Title, Date\n")
+    calendar_file.write("Activity_Title, Month, Day\n")
     calendar_file.close()
 
 
@@ -57,7 +57,7 @@ while decision != "5":
     elif (decision == "2"):
         delete_calendar(calendar_file)
     elif (decision == "3"):
-        pass
+        view_calendar(calendar_file)
     elif (decision == "4"):
         pass
     elif (decision == "5"):
