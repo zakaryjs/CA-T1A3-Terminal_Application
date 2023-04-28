@@ -1,10 +1,17 @@
 import csv
 
 def add_calendar(calendar_file):
+    activity_title = ""
+    activity_day = ""
     print("You have selected Add Calendar - you can now add an activity to your calendar.")
-    activity_title = input("Input the name of the activity you want to add to your calendar: ")
+    while activity_title == "":
+        activity_title = input("Input the name of the activity you want to add to your calendar: ")
     activity_month = input("Input the name of the month that the activity will take place: ")
-    activity_day = input("Input the day that the activity will take place (dd): ")
+    while activity_day == "":
+        try:
+            activity_day = int(input("Input the day that the activity will take place (dd): "))
+        except ValueError as add_cal_value_error:
+            print("Incorrect value. Please type a numerical value.")
     with open("calendar.csv", "a") as file:
         write_to_csv = csv.writer(file)
         write_to_csv.writerow([activity_title, activity_month, activity_day])

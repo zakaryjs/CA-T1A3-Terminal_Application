@@ -14,7 +14,12 @@ try:
 
 except FileNotFoundError as file_not_found:
     print("calendar.csv not found, initialising set up...")
-    year = input("Input the calendar year: ")
+    while True:
+        try:
+            year = int(input("Input the calendar year: "))
+            break
+        except ValueError as value_error:
+            print("Incorrect value, please type a year.")
     print("Success!")
     input("Press enter to continue...")
     print("For a guide on how to use the application, please visit https://github.com/zakaryjs/T1A3-Terminal_Application")
