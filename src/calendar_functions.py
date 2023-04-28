@@ -1,6 +1,7 @@
 import csv
 
 def add_calendar(calendar_file):
+    month_list = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
     activity_title = ""
     activity_day = ""
     activity_month = ""
@@ -9,7 +10,7 @@ def add_calendar(calendar_file):
         activity_title = input("Input the name of the activity you want to add to your calendar: ")
     while activity_month == "":
         activity_month = input("Input the name of the month that the activity will take place: ")
-        while activity_month.lower() not in ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]:
+        while activity_month.lower() not in month_list:
             activity_month = input("Input the name of the month that the activity will take place: ")
     while activity_day == "":
         try:
@@ -43,8 +44,13 @@ def delete_calendar(calendar_file):
 
 
 def view_calendar(calendar_file):
+    month_list = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+    view_month = ""
     print("You have selected View Calendar - you can now view activities that are saved to a certain month in your calendar.")
-    view_month = input("Input the name of the calendar month that you would like to view: ")
+    while view_month == "":
+        view_month = input("Input the name of the calendar month that you would like to view: ")
+        while view_month.lower() not in month_list:
+            view_month = input("Input the name of the calendar month that you would like to view: ")
     view_calendar_list = []
     with open("calendar.csv", "r") as file:
         read_csv = csv.reader(file)
@@ -60,9 +66,14 @@ def view_calendar(calendar_file):
 
     
 def measure_calendar(calendar_file):
+    month_list = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
+    view_month = ""
     score = 0
     print("You have selected Measure Calendar. You can now select a month and receive an output based on how busy the selected month is.")
-    view_month = input("Input the name of the calendar month that you would like to view: ")
+    while view_month == "":
+        view_month = input("Input the name of the calendar month that you would like to view: ")
+        while view_month.lower() not in month_list:
+            view_month = input("Input the name of the calendar month that you would like to view: ")
     view_calendar_list = []
     with open("calendar.csv", "r") as file:
         read_csv = csv.reader(file)
