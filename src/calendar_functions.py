@@ -3,10 +3,14 @@ import csv
 def add_calendar(calendar_file):
     activity_title = ""
     activity_day = ""
+    activity_month = ""
     print("You have selected Add Calendar - you can now add an activity to your calendar.")
     while activity_title == "":
         activity_title = input("Input the name of the activity you want to add to your calendar: ")
-    activity_month = input("Input the name of the month that the activity will take place: ")
+    while activity_month == "":
+        activity_month = input("Input the name of the month that the activity will take place: ")
+        while activity_month.lower() not in ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]:
+            activity_month = input("Input the name of the month that the activity will take place: ")
     while activity_day == "":
         try:
             activity_day = int(input("Input the day that the activity will take place (dd): "))
