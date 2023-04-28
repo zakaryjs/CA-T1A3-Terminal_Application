@@ -3,6 +3,7 @@ import datetime
 from datetime import date
 import calendar
 
+
 def add_calendar(calendar_file):
     month_list = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
     activity_title = ""

@@ -2,8 +2,10 @@ import datetime
 from datetime import date
 import calendar
 # from colored import fg, bg, attr
-from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar, get_date, find_day_of_week
+from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar, get_date
 import csv
+# import emoji
+
 
 file = "calendar.csv"
 
@@ -37,7 +39,7 @@ print("""
 ██╔══╝░░██║░░██╗██╔══██║██║░░░░░██╔══╝░░██║╚████║██║░░██║██╔══██║██╔══██╗
 ███████╗╚█████╔╝██║░░██║███████╗███████╗██║░╚███║██████╔╝██║░░██║██║░░██║
 ╚══════╝░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝""")
-print("Welcome to zCalendar, a calendar application created in Python.")
+print(emoji.emojize("Welcome to zCalendar, a calendar application created in Python. :grinning_face:"))
 print("Enjoy!")
 
 input("Press enter to continue...")
