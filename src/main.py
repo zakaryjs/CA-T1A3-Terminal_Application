@@ -2,7 +2,7 @@ import datetime
 from datetime import date
 import calendar
 # from colored import fg, bg, attr
-from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar
+from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar, get_date, find_day_of_week
 import csv
 
 file = "calendar.csv"
@@ -48,13 +48,14 @@ def main_menu():
     print("2. Input 2 to remove an activity from the calendar")
     print("3. Input 3 to view activities stored in a certain month")
     print("4. Input 4 to see how busy a certain month is")
-    print("5. Input 5 to end the application")
+    print("5. Input 5 to get today's date")
+    print("6. Input 6 to end the application")
     user_input = input("What would you like to do? ")
     return user_input
 
 decision = ""
 
-while decision != "5":
+while decision != "6":
     decision = main_menu()
 
     if (decision == "1"):
@@ -66,6 +67,8 @@ while decision != "5":
     elif (decision == "4"):
         measure_calendar(calendar_file)
     elif (decision == "5"):
+        get_date()
+    elif (decision == "6"):
         pass
     else:
         print("Invalid input. Please return an input between 1 and 5.")

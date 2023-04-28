@@ -1,4 +1,7 @@
 import csv
+import datetime
+from datetime import date
+import calendar
 
 def add_calendar(calendar_file):
     month_list = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
@@ -95,4 +98,17 @@ def measure_calendar(calendar_file):
     elif score >= 0:
         print(f"{view_month} is a really quiet month!")
         input("Press enter to continue...")
-                
+
+def get_date():
+    print("You have selected Get Date. Today's date will now be printed.")
+    todays_date = date.today()
+    input("Press enter to continue...")
+    print(f"Today's date is {todays_date}.")
+    input("Press enter to continue...")
+
+def find_day_of_week():
+    year = int(input("Input the calendar year: "))
+    month = int(input("Enter the month in mm format: "))
+    day = int(input("Enter the day in dd format: "))
+    date_year = datetime.date(year, month, day)
+    day_of_date = calendar.day_name[date_year.weekday()]
