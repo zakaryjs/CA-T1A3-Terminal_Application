@@ -1,10 +1,12 @@
 import datetime
 from datetime import date
 import calendar
-# from colored import fg, bg, attr
+import colored
+from colored import fg, bg, attr
 from calendar_functions import add_calendar, delete_calendar, view_calendar, measure_calendar, get_date
 import csv
-# import emoji
+import emoji
+from emoji import emojize
 
 
 file = "calendar.csv"
@@ -15,7 +17,7 @@ try:
     calendar_file.close()
 
 except FileNotFoundError as file_not_found:
-    print("calendar.csv not found, initialising set up...")
+    print(f"{fg('red')}calendar.csv not found, initialising set up...")
     while True:
         try:
             year = int(input("Input the calendar year: "))
@@ -25,14 +27,14 @@ except FileNotFoundError as file_not_found:
     print("Success!")
     input("Press enter to continue...")
     print("For a guide on how to use the application, please visit https://github.com/zakaryjs/T1A3-Terminal_Application")
-    input("Press enter to continue...")
+    input(f"Press enter to continue...{attr('reset')}")
     calendar_file = open(file, "w")
     calendar_file.write(f"Year: {year}\n")
     calendar_file.write("Activity_Title, Month, Day\n")
     calendar_file.close()
 
 
-print("""
+print(f"""{fg('56')}
 ███████╗░█████╗░░█████╗░██╗░░░░░███████╗███╗░░██╗██████╗░░█████╗░██████╗░
 ╚════██║██╔══██╗██╔══██╗██║░░░░░██╔════╝████╗░██║██╔══██╗██╔══██╗██╔══██╗
 ░░███╔═╝██║░░╚═╝███████║██║░░░░░█████╗░░██╔██╗██║██║░░██║███████║██████╔╝
