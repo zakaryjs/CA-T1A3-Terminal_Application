@@ -113,3 +113,4 @@ def find_day_of_week():
     day = int(input("Enter the day in dd format: "))
     date_year = datetime.date(year, month, day)
     day_of_date = calendar.day_name[date_year.weekday()]
+

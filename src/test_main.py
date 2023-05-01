@@ -11,6 +11,8 @@ def test_add(monkeypatch):
        reader = csv.reader(f)
        original_length = sum(1 for row in reader)
    monkeypatch.setattr('builtins.input', lambda _: "Calendar 1")
+   monkeypatch.setattr('builtins.input', lambda _: "march")
+   monkeypatch.setattr('builtins.input', lambda _: "11")
    add_calendar(test_file_name)
    with open(test_file_name) as f:
        reader = csv.reader(f)
