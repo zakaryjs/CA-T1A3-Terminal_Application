@@ -59,7 +59,8 @@ def test_delete(monkeypatch):
        new_length = sum(1 for row in reader)
    assert calendar_list == []
 
-   inputs = iter(['Test2', 'April', '12', ''])
+   calendar_list = []
+   inputs = iter(['Test', 'April', '12', ''])
    original_length = 0
    with open(test_file_name2) as f:
        reader = csv.reader(f)
