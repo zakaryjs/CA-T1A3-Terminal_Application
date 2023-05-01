@@ -12,9 +12,9 @@ from emoji import emojize
 file = "calendar.csv"
 
 try:
-    calendar_file = open(file, "r")
+    ffile = open(file, "r")
 
-    calendar_file.close()
+    ffile.close()
 
 except FileNotFoundError as file_not_found:
     print(f"{fg('red')}calendar.csv not found, initialising set up...")
@@ -28,10 +28,10 @@ except FileNotFoundError as file_not_found:
     input("Press enter to continue...")
     print("For a guide on how to use the application, please visit https://github.com/zakaryjs/T1A3-Terminal_Application")
     input(f"Press enter to continue...{attr('reset')}")
-    calendar_file = open(file, "w")
-    calendar_file.write(f"Year: {year}\n")
-    calendar_file.write("Activity_Title, Month, Day\n")
-    calendar_file.close()
+    ffile = open(file, "w")
+    ffile.write(f"Year: {year}\n")
+    ffile.write("Activity_Title, Month, Day\n")
+    ffile.close()
 
 
 print(f"""{fg('56')}
@@ -63,13 +63,13 @@ while decision != "6":
     decision = main_menu()
 
     if (decision == "1"):
-        add_calendar(calendar_file)
+        add_calendar(file)
     elif (decision == "2"):
-        delete_calendar(calendar_file)
+        delete_calendar(file)
     elif (decision == "3"):
-        view_calendar(calendar_file)
+        view_calendar(file)
     elif (decision == "4"):
-        measure_calendar(calendar_file)
+        measure_calendar(file)
     elif (decision == "5"):
         get_date()
     elif (decision == "6"):

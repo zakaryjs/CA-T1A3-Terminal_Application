@@ -21,7 +21,7 @@ def add_calendar(calendar_file):
             activity_day = int(input("Input the day that the activity will take place (dd): "))
         except ValueError as add_cal_value_error:
             print("Incorrect value. Please type a numerical value.")
-    with open("calendar.csv", "a") as file:
+    with open(calendar_file, "a") as file:
         write_to_csv = csv.writer(file)
         write_to_csv.writerow([activity_title, activity_month, activity_day])
     input("Press enter to continue...")
@@ -31,13 +31,13 @@ def delete_calendar(calendar_file):
     print("You have selected Delete Calendar - you can now delete an activity from your calendar.")
     delete_activity = input("Input the name of the activity that you wish to delete: ")
     calendar_list = []
-    with open("calendar.csv", "r") as file:
+    with open(calendar_file, "r") as file:
         read_csv = csv.reader(file)
         for row in read_csv:
             if(delete_activity != row[0]):
                 calendar_list.append(row)
     input("Press enter to continue...")
-    with open("calendar.csv", "w") as file:
+    with open(calendar_file, "w") as file:
         write_to_csv = csv.writer(file)
         write_to_csv.writerows(calendar_list)
     print("Updated calendar preview:")
@@ -56,7 +56,7 @@ def view_calendar(calendar_file):
         while view_month.lower() not in month_list:
             view_month = input("Input the name of the calendar month that you would like to view: ")
     view_calendar_list = []
-    with open("calendar.csv", "r") as file:
+    with open(calendar_file, "r") as file:
         read_csv = csv.reader(file)
         for row in read_csv:
             view_calendar_list.append(row)
@@ -79,7 +79,7 @@ def measure_calendar(calendar_file):
         while view_month.lower() not in month_list:
             view_month = input("Input the name of the calendar month that you would like to view: ")
     view_calendar_list = []
-    with open("calendar.csv", "r") as file:
+    with open(calendar_file, "r") as file:
         read_csv = csv.reader(file)
         for row in read_csv:
             view_calendar_list.append(row)
