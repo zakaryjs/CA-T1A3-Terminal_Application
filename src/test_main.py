@@ -40,40 +40,30 @@ def test_get_date(monkeypatch):
     assert get_date
 
 def test_delete(monkeypatch):
-   calendar_list = []
-   inputs = iter(['Test', 'March', '11', ''])
+   inputs = iter(['Test', ''])
    original_length = 0
-   with open(test_file_name2) as f:
+   with open(test_file_name) as f:
        reader = csv.reader(f)
        original_length = sum(1 for row in reader)
    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-   add_calendar(test_file_name2)
-   with open(test_file_name2) as f:
+   delete_calendar(test_file_name)
+   with open(test_file_name) as f:
        reader = csv.reader(f)
        new_length = sum(1 for row in reader)
-   inputs = iter(['Test', '', ''])
-   monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-   delete_calendar(test_file_name2)
-   with open(test_file_name2) as f:
-       reader = csv.reader(f)
-       new_length = sum(1 for row in reader)
-   assert calendar_list == []
+   print(original_length)
+   print(new_length)
+   assert new_length == original_length - 1
 
-   calendar_list = []
-   inputs = iter(['Test', 'April', '12', ''])
+   inputs = iter(['Test3', ''])
    original_length = 0
-   with open(test_file_name2) as f:
+   with open(test_file_name) as f:
        reader = csv.reader(f)
        original_length = sum(1 for row in reader)
    monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-   add_calendar(test_file_name2)
-   with open(test_file_name2) as f:
+   delete_calendar(test_file_name)
+   with open(test_file_name) as f:
        reader = csv.reader(f)
        new_length = sum(1 for row in reader)
-   inputs = iter(['Test', '', ''])
-   monkeypatch.setattr('builtins.input', lambda _: next(inputs))
-   delete_calendar(test_file_name2)
-   with open(test_file_name2) as f:
-       reader = csv.reader(f)
-       new_length = sum(1 for row in reader)
-   assert calendar_list == []
+   print(original_length)
+   print(new_length)
+   assert new_length == original_length - 1
