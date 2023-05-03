@@ -69,21 +69,28 @@ Will be implemented with a ```get_date``` function. Will provide the user with t
 
 1. Download the zip or clone from the source repository.
 2. Ensure that Python is installed - ```python3 -- version``` in the terminal. If not, [Download Python](https://www.python.org/downloads/).
-3. Run the ```run.sh``` file.
+3. Run the ```run.sh``` file, by right clicking and selecting ```run as program```.
 
 ### Modules Used
 
 Calendar
+<br>
 Datetime
+<br>
 Colored
+<br>
 Emoji
+<br>
 Pytest
+<br>
 calendar_functions
+<br>
 
 ### System and Hardware Requirements
 
 1. Have Python installed
 2. Have a terminal
+<br>
 This program is not intensive, and should run on every modern PC.
 
 ### How to Use
@@ -99,8 +106,13 @@ Or:
 1. Download the files, open the terminal and navigate to ```src/```.
 2. If the venv is created, simply type ```python3 main.py```.
 3. If not, type the following:
+<br>
 ```python3 -m venv calendar-venv```
+<br>
 ```source calendar-venv/bin/activate```
+<br>
 ```pip install -r requirements.txt```
+<br>
 ```clear```
+<br>
 ```python3 main.py```
