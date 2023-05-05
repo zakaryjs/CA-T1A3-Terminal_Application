@@ -49,6 +49,8 @@ Will be implemented with a ```get_date``` function. Will provide the user with t
 
 ## Implementation Plan
 
+Trello Link: https://trello.com/invite/b/YISj9cRb/ATTI6ef734c1f174b3c7474922c5cb076a015072524F/t1a3-terminal-application
+
 ![Implementation Plan](./docs/implementation_plan.png)
 
 ### Checklists
@@ -98,12 +100,14 @@ This program is not intensive, and should run on every modern PC.
 Either:
 
 1. Download the files, navigate to ```src/```.
+    - To download, navigate to the source repository, select the green code button, and then ```download ZIP```.
+    - Alternatively, select the green code button and then copy the SSH link. Navigate to your terminal and type ```git clone <repo>```.
 2. Right click on ```run.sh``` and select ```Run as Program```.
 3. Follow the on screen instructions to enjoy the program.
 
 Or:
 
-1. Download the files, open the terminal and navigate to ```src/```.
+1. Download the files, as mentioned above, open the terminal and navigate to ```src/```.
 2. If the venv is created, simply type ```python3 main.py```.
 3. If not, type the following:
 <br>
@@ -116,3 +120,10 @@ Or:
 ```clear```
 <br>
 ```python3 main.py```
+
+On Windows, ensure that WSL is installed and you are operating inside that terminal.
+
+**Once you are using the program:**
+- Input a number 1 - 6 to navigate the menu.
+- Follow instructions specific to the selected function.
+- To force close, input ```Ctrl + C```.
